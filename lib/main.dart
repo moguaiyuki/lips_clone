@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'pages/home_page/home_page.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xFFED7987),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: RootPage(title: 'Flutter Demo Home Page'),
+      home: HomePage(),
     );
   }
 }
