@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lips_clone/utils/styles/styles.dart';
 
 import 'pages/home_page/home_page.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Lips Clone',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color(0xFFED7987),
+        primaryColor: LipsColors.main,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomePage(),
