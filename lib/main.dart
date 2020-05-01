@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lips_clone/utils/styles/styles.dart';
 
 import 'pages/home_page/home_page.dart';
+import 'utils/styles/styles.dart';
 
 void main() {
   runApp(MyApp());

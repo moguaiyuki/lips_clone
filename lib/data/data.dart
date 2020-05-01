@@ -1,7 +1,6 @@
 import 'dart:math';
 
-import 'package:lips_clone/models/item.dart';
-
+import '../models/item.dart';
 import '../models/post.dart';
 import '../models/user.dart';
 

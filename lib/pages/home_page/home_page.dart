@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:lips_clone/pages/home_page/components/custom_tab_indicator.dart';
-import 'package:lips_clone/pages/home_page/components/tabs.dart';
-import 'package:lips_clone/pages/home_page/tabs/tabs.dart';
-import 'package:lips_clone/utils/styles/styles.dart';
+
+import '../../utils/styles/styles.dart';
+import 'components/custom_tab_indicator.dart';
+import 'components/tabs.dart';
+import 'tabs/tabs.dart';
 
 class HomePage extends StatefulWidget {
   @override
