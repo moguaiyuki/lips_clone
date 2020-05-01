@@ -1,6 +1,3 @@
-import 'dart:math';
-import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -8,11 +5,6 @@ import 'package:lips_clone/data/data.dart';
 import 'package:lips_clone/utils/styles/colors.dart';
 
 class RecomendedTabView extends StatelessWidget {
-  RecomendedTabView() : _sizes = _createSizes(_kItemCount).toList();
-
-  static const _kItemCount = 300;
-  final List<IntSize> _sizes;
-
   @override
   Widget build(BuildContext context) {
     return StaggeredGridView.countBuilder(
@@ -177,6 +169,44 @@ class RecomendedTabView extends StatelessWidget {
                 height: 1,
                 margin: EdgeInsets.symmetric(horizontal: 15),
               ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    ClipOval(
+                      child: Image(
+                        image: AssetImage(post.item.imageUrl),
+                        height: 30,
+                        width: 30,
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            post.item.brand,
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.grey[700],
+                            ),
+                          ),
+                          Text(
+                            post.item.name,
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Colors.grey[700],
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         );
@@ -185,83 +215,3 @@ class RecomendedTabView extends StatelessWidget {
     );
   }
 }
-
-List<IntSize> _createSizes(int count) {
-  Random rnd = Random();
-  return List.generate(
-      count, (i) => IntSize((rnd.nextInt(500) + 200), rnd.nextInt(800) + 200));
-}
-
-class IntSize {
-  const IntSize(this.width, this.height);
-
-  final int width;
-  final int height;
-}
-
-final Uint8List kTransparentImage = new Uint8List.fromList(<int>[
-  0x89,
-  0x50,
-  0x4E,
-  0x47,
-  0x0D,
-  0x0A,
-  0x1A,
-  0x0A,
-  0x00,
-  0x00,
-  0x00,
-  0x0D,
-  0x49,
-  0x48,
-  0x44,
-  0x52,
-  0x00,
-  0x00,
-  0x00,
-  0x01,
-  0x00,
-  0x00,
-  0x00,
-  0x01,
-  0x08,
-  0x06,
-  0x00,
-  0x00,
-  0x00,
-  0x1F,
-  0x15,
-  0xC4,
-  0x89,
-  0x00,
-  0x00,
-  0x00,
-  0x0A,
-  0x49,
-  0x44,
-  0x41,
-  0x54,
-  0x78,
-  0x9C,
-  0x63,
-  0x00,
-  0x01,
-  0x00,
-  0x00,
-  0x05,
-  0x00,
-  0x01,
-  0x0D,
-  0x0A,
-  0x2D,
-  0xB4,
-  0x00,
-  0x00,
-  0x00,
-  0x00,
-  0x49,
-  0x45,
-  0x4E,
-  0x44,
-  0xAE,
-]);

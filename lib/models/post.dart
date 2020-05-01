@@ -1,4 +1,5 @@
-import 'package:lips_clone/models/user.dart';
+import 'item.dart';
+import 'user.dart';
 
 class Post {
   final int likes;
@@ -7,6 +8,14 @@ class Post {
   final User user;
   final String imageUrl;
   final String description;
+  final Item item;
 
-  Post({this.likes, this.clips, this.user, this.imageUrl, this.description});
+  Post({
+    this.likes,
+    this.clips,
+    this.user,
+    this.imageUrl,
+    this.description,
+    this.item,
+  });
 }
