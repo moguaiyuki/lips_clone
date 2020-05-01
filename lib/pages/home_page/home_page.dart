@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lips_clone/pages/home_page/components/custom_tab_indicator.dart';
 import 'package:lips_clone/pages/home_page/components/tabs.dart';
+import 'package:lips_clone/pages/home_page/tabs/tabs.dart';
 import 'package:lips_clone/utils/styles/styles.dart';
 
 class HomePage extends StatefulWidget {
@@ -24,6 +25,7 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: LipsColors.brandSub,
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: const Padding(
@@ -43,9 +45,10 @@ class _HomePageState extends State<HomePage>
           child: Text(
             'キーワードで検索',
             style: TextStyle(
-                color: Colors.grey[600],
-                fontSize: LipsFontSize.xxsmall,
-                fontWeight: FontWeight.w500),
+              color: LipsColors.mainTextColor,
+              fontSize: LipsFontSize.xxsmall,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
         actions: [
@@ -65,13 +68,26 @@ class _HomePageState extends State<HomePage>
           isScrollable: true,
           controller: _tabController,
           labelColor: Colors.white,
-          unselectedLabelColor: Colors.grey[600],
+          unselectedLabelColor: LipsColors.mainTextColor,
           labelStyle: TextStyle(fontSize: LipsFontSize.xxsmall),
           indicator: CustomTabIndicator(),
           tabs: lipsTabItems,
         ),
       ),
-      body: Placeholder(),
+      body: TabBarView(
+        controller: _tabController,
+        children: [
+          Placeholder(),
+          Placeholder(),
+          Placeholder(),
+          RecomendedTabView(),
+          Placeholder(),
+          Placeholder(),
+          Placeholder(),
+          Placeholder(),
+          Placeholder(),
+        ],
+      ),
     );
   }
 

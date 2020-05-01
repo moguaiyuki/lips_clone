@@ -25,7 +25,7 @@ class _CustomPainter extends BoxPainter {
         Offset(offset.dx, (configuration.size.height / 2) - 30 / 2) &
             Size(configuration.size.width, 30);
     final Paint paint = Paint();
-    paint.color = LipsColors.main;
+    paint.color = LipsColors.brand;
     paint.style = PaintingStyle.fill;
     canvas.drawRRect(
       RRect.fromRectAndRadius(rect, Radius.circular(15.0)),
