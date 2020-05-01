@@ -5,6 +5,7 @@ import '../models/post.dart';
 import '../models/user.dart';
 
 var random = Random();
+
 final userNames = [
   "ハル",
   "ごわちゃん",
@@ -14,6 +15,7 @@ final userNames = [
   "まっちゃラテ",
   "あさい",
 ];
+
 final itemNames = [
   'リップジェル',
   'おなかすいた',
@@ -21,6 +23,7 @@ final itemNames = [
   'エリクシール　フレーバー',
   'グリッタープリズム',
 ];
+
 final itemBrands = [
   'MISSHA',
   'エリクシール',
@@ -28,6 +31,7 @@ final itemBrands = [
   'DAISO',
   'the SAEM',
 ];
+
 final users = List.generate(
   7,
   (index) => User(
@@ -37,6 +41,7 @@ final users = List.generate(
     star: random.nextInt(3) + 2,
   ),
 );
+
 final posts = List.generate(
   300,
   (index) => Post(
