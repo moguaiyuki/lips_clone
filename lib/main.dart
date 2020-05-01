@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'pages/home_page/home_page.dart';
 import 'utils/styles/styles.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
