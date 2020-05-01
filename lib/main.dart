@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Lips Clone',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: LipsColors.main,
+        primaryColor: LipsColors.brand,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomePage(),
