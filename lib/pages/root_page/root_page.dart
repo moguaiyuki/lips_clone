@@ -75,6 +75,7 @@ class _RootPageState extends State<RootPage>
     lipsBottomNavigationBarItems
         .asMap()
         .forEach((index, lipsBottomNavigationBarItem) {
+      print(index);
       final Widget view = FadeTransition(
         opacity: _faders[index].drive(
           CurveTween(curve: Curves.fastOutSlowIn),
