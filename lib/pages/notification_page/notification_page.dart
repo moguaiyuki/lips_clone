@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class RankingPage extends StatelessWidget {
+class NotificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Container(
-          width: 300,
-          height: 300,
-          color: Colors.red,
+          width: 100,
+          height: 100,
+          color: Colors.blue,
         ),
       ),
     );

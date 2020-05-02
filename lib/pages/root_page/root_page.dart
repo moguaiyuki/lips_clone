@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:lips_clone/pages/home_page/home_page.dart';
-import 'package:lips_clone/pages/root_page/components/lips_bottom_navigation_bar.dart';
-import 'package:lips_clone/utils/styles/colors.dart';
-import 'components/destinations.dart';
 
+import '../../utils/styles/colors.dart';
+import '../clip_page/clip_page.dart';
+import '../home_page/home_page.dart';
+import '../notification_page/notification_page.dart';
+import '../ranking_page/ranking_page.dart';
+import 'components/destinations.dart';
+import 'components/lips_bottom_navigation_bar.dart';
 import 'components/lips_bottom_navigation_bar_item.dart';
 
 class RootPage extends StatefulWidget {
@@ -35,7 +37,7 @@ class _RootPageState extends State<RootPage>
     _destinationKeys = List<GlobalKey>.generate(
       lipsBottomNavigationBarItems.length,
       (int index) => GlobalKey(),
-    );
+    ).toList();
   }
 
   @override
@@ -108,11 +110,11 @@ class _RootPageState extends State<RootPage>
       case Destination.home:
         return HomePage();
       case Destination.ranking:
-        return HomePage();
+        return RankingPage();
       case Destination.clip:
-        return HomePage();
+        return ClipPage();
       case Destination.notification:
-        return HomePage();
+        return NotificationPage();
       default:
         return HomePage();
     }

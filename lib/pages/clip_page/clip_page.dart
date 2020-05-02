@@ -4,10 +4,12 @@ class ClipPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: 100,
-        height: 100,
-        color: Colors.yellow,
+      body: Center(
+        child: Container(
+          width: 150,
+          height: 150,
+          color: Colors.yellow,
+        ),
       ),
     );
   }
