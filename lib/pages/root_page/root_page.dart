@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lips_clone/pages/posting_page/posting_page.dart';
 
 import '../../utils/styles/styles.dart';
 import '../clip_page/clip_page.dart';
@@ -48,7 +49,11 @@ class _RootPageState extends State<RootPage>
         width: 75,
         child: FloatingActionButton(
           backgroundColor: LipsColors.brand,
-          onPressed: () {},
+          onPressed: () => Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => PostingPage(),
+            ),
+          ),
           child: Icon(
             Icons.add,
             size: 40,
