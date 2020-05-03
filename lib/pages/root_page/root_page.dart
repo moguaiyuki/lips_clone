@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/styles/colors.dart';
+import '../../utils/styles/styles.dart';
 import '../clip_page/clip_page.dart';
 import '../home_page/home_page.dart';
 import '../notification_page/notification_page.dart';
