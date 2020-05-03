@@ -73,34 +73,29 @@ class _RootPageState extends State<RootPage>
   }
 
   List<Widget> _buildDestinationPage() {
-    List<Widget> views = [];
-    lipsBottomNavigationBarItems
-        .asMap()
-        .forEach((index, lipsBottomNavigationBarItem) {
-      print(index);
+    return lipsBottomNavigationBarItems.map((lipsBottomNavigationBarItem) {
       final Widget view = FadeTransition(
-        opacity: _faders[index].drive(
+        opacity: _faders[lipsBottomNavigationBarItem.destinationIndex].drive(
           CurveTween(curve: Curves.fastOutSlowIn),
         ),
         child: KeyedSubtree(
-          key: _destinationKeys[index],
+          key: _destinationKeys[lipsBottomNavigationBarItem.destinationIndex],
           child: _destinationPage(
             destination: lipsBottomNavigationBarItem.destination,
           ),
         ),
       );
-      if (index == _currentIndex) {
-        _faders[index].forward();
-        views.add(view);
+      if (lipsBottomNavigationBarItem.destinationIndex == _currentIndex) {
+        _faders[lipsBottomNavigationBarItem.destinationIndex].forward();
+        return view;
       } else {
-        _faders[index].reverse();
-        if (_faders[index].isAnimating) {
-          views.add(IgnorePointer(child: view));
+        _faders[lipsBottomNavigationBarItem.destinationIndex].reverse();
+        if (_faders[lipsBottomNavigationBarItem.destinationIndex].isAnimating) {
+          return IgnorePointer(child: view);
         }
-        views.add(Offstage(child: view));
+        return Offstage(child: view);
       }
-    });
-    return views;
+    }).toList();
   }
 
   Widget _destinationPage({
