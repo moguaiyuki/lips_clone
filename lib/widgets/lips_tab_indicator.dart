@@ -2,17 +2,22 @@
 import 'package:flutter/material.dart';
 import 'package:lips_clone/utils/styles/styles.dart';
 
-class CustomTabIndicator extends Decoration {
+class LipsTabIndicator extends Decoration {
+  final double xOffset;
+
+  LipsTabIndicator({this.xOffset = 0});
+
   @override
   BoxPainter createBoxPainter([onChanged]) {
-    return _CustomPainter(this, onChanged);
+    return _LipsPainter(this, onChanged, xOffset);
   }
 }
 
-class _CustomPainter extends BoxPainter {
-  final CustomTabIndicator decoration;
+class _LipsPainter extends BoxPainter {
+  final LipsTabIndicator decoration;
+  final double xOffset;
 
-  _CustomPainter(this.decoration, VoidCallback onChanged)
+  _LipsPainter(this.decoration, VoidCallback onChanged, [this.xOffset = 0])
       : assert(decoration != null),
         super(onChanged);
 
@@ -22,8 +27,8 @@ class _CustomPainter extends BoxPainter {
     assert(configuration.size != null);
 
     final Rect rect =
-        Offset(offset.dx, (configuration.size.height / 2) - 30 / 2) &
-            Size(configuration.size.width, 30);
+        Offset(offset.dx + xOffset, (configuration.size.height / 2) - 30 / 2) &
+            Size(configuration.size.width - (xOffset * 2), 30);
     final Paint paint = Paint();
     paint.color = LipsColors.brand;
     paint.style = PaintingStyle.fill;
