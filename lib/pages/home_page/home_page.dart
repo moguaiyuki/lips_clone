@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lips_clone/widgets/lips_tab_indicator.dart';
 
 import '../../utils/styles/styles.dart';
-import 'components/custom_tab_indicator.dart';
 import 'components/tabs.dart';
 import 'tabs/tabs.dart';
 
@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage>
   void initState() {
     super.initState();
     _tabController = TabController(
-      length: lipsTabItems.length,
+      length: lipsHomeTabItems.length,
       vsync: this,
       initialIndex: 3,
     );
@@ -68,11 +68,11 @@ class _HomePageState extends State<HomePage>
         bottom: TabBar(
           isScrollable: true,
           controller: _tabController,
-          labelColor: Colors.white,
-          unselectedLabelColor: LipsColors.mainTextColor,
-          labelStyle: TextStyle(fontSize: LipsFontSize.xxsmall),
-          indicator: CustomTabIndicator(),
-          tabs: lipsTabItems,
+          labelColor: LipsColors.tabLabelColor,
+          unselectedLabelColor: LipsColors.tabUnselectedLableColor,
+          labelStyle: LipsTextStyle.tablabelStyle,
+          indicator: LipsTabIndicator(),
+          tabs: lipsHomeTabItems,
         ),
       ),
       body: TabBarView(
