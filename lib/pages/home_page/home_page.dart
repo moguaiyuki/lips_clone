@@ -28,7 +28,6 @@ class _HomePageState extends State<HomePage>
     return Scaffold(
       backgroundColor: LipsColors.brandSub,
       appBar: AppBar(
-        backgroundColor: Colors.white,
         leading: const Padding(
           padding: EdgeInsets.all(8.0),
           child: ClipOval(

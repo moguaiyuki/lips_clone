@@ -8,7 +8,6 @@ class NotificationPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: LipsColors.brandSub,
       appBar: AppBar(
-        backgroundColor: Colors.white,
         title: Text(
           '通知',
           style: LipsTextStyle.appBarTitleTextStyle,

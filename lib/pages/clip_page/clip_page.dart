@@ -27,7 +27,6 @@ class _ClipPageState extends State<ClipPage>
     return Scaffold(
       backgroundColor: LipsColors.brandSub,
       appBar: AppBar(
-        backgroundColor: Colors.white,
         title: Text(
           'マイクリップ',
           style: LipsTextStyle.appBarTitleTextStyle,
