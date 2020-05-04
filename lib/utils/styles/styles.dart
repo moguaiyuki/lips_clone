@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class LipsColors {
   const LipsColors._();
-  static const Color brand = Color(0xFFED7987);
+  static const Color brand = Color(0xFFEF8391);
   static const Color brandSub = Color(0xFFE7E3E1);
   static const Color mainTextColor = Color(0xFF757575);
 
