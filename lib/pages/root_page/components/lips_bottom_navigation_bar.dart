@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lips_clone/pages/root_page/components/lips_bottom_navigation_bar_item.dart';
+
 import 'destinations.dart';
+import 'lips_bottom_navigation_bar_item.dart';
 
 class LipsBottomNavigationBar extends StatefulWidget {
   final List<LipsBottomNavigationBarItem> items;

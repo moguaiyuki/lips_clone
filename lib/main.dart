@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lips_clone/pages/root_page/root_page.dart';
+
+import 'pages/root_page/root_page.dart';
 
 void main() => runApp(MyApp());
 

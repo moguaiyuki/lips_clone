@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:lips_clone/pages/posting_page/posting_page.dart';
 
 import '../../utils/styles/styles.dart';
 import '../clip_page/clip_page.dart';
 import '../home_page/home_page.dart';
 import '../notification_page/notification_page.dart';
+import '../posting_page/posting_page.dart';
 import '../ranking_page/ranking_page.dart';
 import 'components/destinations.dart';
 import 'components/lips_bottom_navigation_bar.dart';

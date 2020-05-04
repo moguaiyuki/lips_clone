@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:lips_clone/pages/ranking_page/components/ranking_list_view.dart';
-import 'package:lips_clone/pages/ranking_page/components/tabs.dart';
-import 'package:lips_clone/utils/styles/styles.dart';
-import 'package:lips_clone/widgets/lips_tab_indicator.dart';
+
+import '../../utils/styles/styles.dart';
+import '../../widgets/lips_tab_indicator.dart';
+import 'components/ranking_list_view.dart';
+import 'components/tabs.dart';
 
 class RankingPage extends StatelessWidget {
   @override

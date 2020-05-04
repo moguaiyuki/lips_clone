@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lips_clone/utils/styles/styles.dart';
+
+import '../../../utils/styles/styles.dart';
 
 class RankingBottomSheet extends StatelessWidget {
   @override

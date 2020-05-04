@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:lips_clone/data/data.dart';
-import 'package:lips_clone/models/item.dart';
-import 'package:lips_clone/pages/ranking_page/components/ranking_bottom_sheet.dart';
-import 'package:lips_clone/pages/ranking_page/components/ranking_list_tile.dart';
-import 'package:lips_clone/utils/styles/styles.dart';
+
+import '../../../data/data.dart';
+import '../../../models/item.dart';
+import '../../../utils/styles/styles.dart';
+import 'ranking_bottom_sheet.dart';
+import 'ranking_list_tile.dart';
 
 class RankingListView extends StatelessWidget {
   final List<Item> _upComingItems;

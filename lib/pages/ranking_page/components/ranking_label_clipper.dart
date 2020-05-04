@@ -5,7 +5,6 @@ class RankingLabelClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     Path path = Path();
     path.lineTo(0.0, size.height);
-    // Offset centerPoint = Offset(size.width / 2, size.height * 2 / 3);
     path.lineTo(size.width / 2, size.height * 3 / 4);
     path.lineTo(size.width, size.height);
     path.lineTo(size.width, 0.0);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lips_clone/widgets/lips_tab_indicator.dart';
 
 import '../../utils/styles/styles.dart';
+import '../../widgets/lips_tab_indicator.dart';
 import 'components/tabs.dart';
 import 'tabs/tabs.dart';
 

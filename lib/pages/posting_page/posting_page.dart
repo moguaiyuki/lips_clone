@@ -1,7 +1,8 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:lips_clone/utils/styles/styles.dart';
+
+import '../../utils/styles/styles.dart';
 
 class PostingPage extends StatelessWidget {
   @override

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lips_clone/pages/notification_page/components/notification_card.dart';
-import 'package:lips_clone/utils/styles/styles.dart';
+
+import '../../utils/styles/styles.dart';
+import 'components/notification_card.dart';
 
 class NotificationPage extends StatelessWidget {
   @override

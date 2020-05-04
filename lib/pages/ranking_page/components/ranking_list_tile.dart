@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:lips_clone/models/item.dart';
 import 'package:intl/intl.dart';
-import 'package:lips_clone/pages/ranking_page/components/ranking_label_clipper.dart';
-import 'package:lips_clone/utils/styles/styles.dart';
+
+import '../../../models/item.dart';
+import '../../../utils/styles/styles.dart';
+import 'ranking_label_clipper.dart';
 
 enum RankingType { hotRanking, monthlyRanking }
 
