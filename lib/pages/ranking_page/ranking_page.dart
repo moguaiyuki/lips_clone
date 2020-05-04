@@ -39,20 +39,10 @@ class RankingPage extends StatelessWidget {
           ),
         ),
         body: TabBarView(
-          children: [
-            RankingListView(),
-            Placeholder(),
-            Placeholder(),
-            Placeholder(),
-            Placeholder(),
-            Placeholder(),
-            Placeholder(),
-            Placeholder(),
-            Placeholder(),
-            Placeholder(),
-            Placeholder(),
-            Placeholder(),
-          ],
+          children: List<RankingListView>.generate(
+            lipsRankingTabItems.length,
+            (index) => RankingListView(),
+          ),
         ),
       ),
     );
