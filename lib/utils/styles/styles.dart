@@ -8,6 +8,8 @@ class LipsColors {
 
   static const Color tabLabelColor = Colors.white;
   static const Color tabUnselectedLableColor = Colors.black54;
+
+  static const Color grey = Color(0xFF988D8D);
 }
 
 class LipsTextStyle {
