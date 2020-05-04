@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lips_clone/data/data.dart';
 import 'package:lips_clone/models/item.dart';
+import 'package:lips_clone/pages/ranking_page/components/ranking_bottom_sheet.dart';
 import 'package:lips_clone/pages/ranking_page/components/ranking_list_tile.dart';
 import 'package:lips_clone/utils/styles/styles.dart';
 
@@ -75,17 +76,30 @@ class RankingListView extends StatelessWidget {
           ),
           Positioned(
             bottom: 50,
-            child: Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.symmetric(horizontal: 80, vertical: 12),
-              decoration: BoxDecoration(
-                  color: LipsColors.grey.withAlpha(240),
-                  borderRadius: BorderRadius.circular(20)),
-              child: Text(
-                'サブカテゴリー: すべて',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 12,
+            child: GestureDetector(
+              onTap: () => showModalBottomSheet(
+                  isScrollControlled: true,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(25),
+                    ),
+                  ),
+                  context: context,
+                  builder: (context) {
+                    return RankingBottomSheet();
+                  }),
+              child: Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.symmetric(horizontal: 80, vertical: 12),
+                decoration: BoxDecoration(
+                    color: LipsColors.grey.withAlpha(240),
+                    borderRadius: BorderRadius.circular(20)),
+                child: Text(
+                  'サブカテゴリー: すべて',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                  ),
                 ),
               ),
             ),
