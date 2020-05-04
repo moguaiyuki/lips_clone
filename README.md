@@ -1,4 +1,5 @@
 # Lips(Android版)のUI模写 (Flutter)
+実装自体は結構雑でwidget分割も少なめです
 | Home | Ranking1 | Ranking2 |
 | ------------- | ------------- | ------------- | 
 | ![Screenshot_1588582537](https://user-images.githubusercontent.com/22650523/80950303-8f2eba00-8e30-11ea-8c1b-ad6ae52b444c.png)  | ![Screenshot_1588582541](https://user-images.githubusercontent.com/22650523/80950313-95249b00-8e30-11ea-8027-64a0841fb5b3.png)  |![Screenshot_1588582543](https://user-images.githubusercontent.com/22650523/80950316-95bd3180-8e30-11ea-86b7-924af11f3457.png) |
