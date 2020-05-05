@@ -48,18 +48,20 @@ class _LipsBottomNavigationBarState extends State<LipsBottomNavigationBar> {
     );
 
     items.insert(
-        widget.items.length >> 1,
-        Expanded(
-          child: SizedBox(
-            height: widget.height,
-          ),
-        ));
+      widget.items.length >> 1,
+      Expanded(
+        child: SizedBox(
+          height: widget.height,
+        ),
+      ),
+    );
 
     return BottomAppBar(
-        child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: items,
-    ));
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: items,
+      ),
+    );
   }
 
   Widget _buildTabItem({LipsBottomNavigationBarItem item, int index}) {
